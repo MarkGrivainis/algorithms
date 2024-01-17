@@ -1,0 +1,25 @@
+{
+  "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
+  "configurations": {
+    "run": {
+      "adapter": "debugpy",
+      "default": true,
+      "configuration": {
+        "name": "Python Debugger: Module",
+        "type": "debugpy",
+        "request": "launch",
+        "python": "$VIRTUAL_ENV/bin/python",
+        "module": "algorithms",
+        "justMyCode": true,
+        "args": ["Mark"]
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "",
+          "userUnhandled": ""
+        }
+      }
+    }
+  }
+}

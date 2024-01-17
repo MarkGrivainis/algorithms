@@ -1,0 +1,14 @@
+bump-my-version==0.16.2
+watchdog==3.0.0
+nox==2023.4.22
+coverage==7.4.0
+Sphinx==7.2.6
+twine==4.0.2
+pytest==7.4.4
+ruff==0.1.13
+python-lsp-server==1.4.0
+pylsp-rope==0.1.11
+debugpy==1.8.0
+mypy==1.8.0
+bandit==1.7.6
+
