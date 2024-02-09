@@ -7,7 +7,7 @@ import nox
 
 # It's a good idea to keep your dev session out of the default list
 # so it's not run twice accidentally
-nox.options.sessions = [...]  # Sessions other than 'dev'
+nox.options.sessions = ["test", "lint"]  # Sessions other than 'dev'
 
 # this VENV_DIR constant specifies the name of the dir that the `dev`
 # session will create, containing the virtualenv;
@@ -77,3 +77,27 @@ def release(session: nox.Session) -> None:
     session.log("Pushing the new tag")
     session.run("git", "push", external=True)
     session.run("git", "push", "--tags", external=True)
+
+
+@nox.session
+def test(session: nox.Session) -> None:
+    """
+    Run the test suite.
+
+    Usage:
+    $ nox -s tests
+    """
+    session.install("pytest")
+    session.run("pytest")
+
+
+@nox.session
+def lint(session: nox.Session) -> None:
+    """
+    Run linters.
+
+    Usage:
+    $ nox -s lint
+    """
+    session.install("ruff")
+    session.run("ruff", "check")
