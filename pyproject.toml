@@ -55,7 +55,7 @@ where = ["src"]
 "algorithms" = ["py.typed"]
 
 [tool.bumpversion]
-current_version = "0.1.1"
+current_version = "0.1.2"
 commit = true
 tag = true
 
