@@ -48,18 +48,18 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint/ruff: ## check style with ruff
-	ruff check algorithms tests
+	ruff check src/algorithms tests
 
 lint/mypy: ## check style with mypy
-	mypy algorithms tests
+	mypy src/algorithms
 
 lint/bandit: ## check style with bandit
-	bandit -r algorithms tests
+	bandit -c pyproject.toml -r src/algorithms
 
 lint: lint/ruff lint/mypy lint/bandit ## check style
 
 format/ruff: ## check style with ruff
-	ruff format --fix algorithms tests
+	ruff format src/algorithms tests
 
 format: format/ruff ## fix style
 
