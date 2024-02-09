@@ -72,7 +72,7 @@ def release(session: nox.Session) -> None:
     session.install("bump-my-version")
 
     session.log(f"Bumping the {version!r} version")
-    session.run("bump-my-version bump", version)
+    session.run("bump-my-version", "bump", version)
 
     session.log("Pushing the new tag")
     session.run("git", "push", external=True)
