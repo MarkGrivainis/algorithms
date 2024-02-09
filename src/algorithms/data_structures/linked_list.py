@@ -2,14 +2,16 @@
 from dataclasses import dataclass
 from typing import Generic, Optional, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
+
 
 @dataclass
 class Node(Generic[T]):
     """Node of a linked list containing a value and a pointer to the next node."""
 
     value: T
-    next: Optional['Node[T]'] 
+    next: Optional["Node[T]"]
+
 
 class LinkedList(Generic[T]):
     """Linked list data structure.

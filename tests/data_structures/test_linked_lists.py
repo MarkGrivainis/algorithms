@@ -49,4 +49,3 @@ class TestLinkedList:
         ll = LinkedList[int]()
         ll.delete(1)
         assert ll.search(1) is None
-
