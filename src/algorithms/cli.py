@@ -1,4 +1,5 @@
 """Console script for tipseq_analysis."""
+import sys
 from typing import Optional
 
 import click
@@ -12,3 +13,7 @@ def main(args: Optional[list[str]] = None) -> int:
     )
     click.echo("See click documentation at https://click.palletsprojects.com/")
     return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())  # pragma: no cover
